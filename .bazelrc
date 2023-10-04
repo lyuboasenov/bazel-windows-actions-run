@@ -1,2 +1,11 @@
 build --verbose_failures
 build --subcommands
+
+build --action_env=PATH=C:\\windows;C:\\windows\\system32;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;
+build --action_env=PathEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+build --action_env=SYSTEMDRIVE=C:
+build --action_env=SYSTEMROOT=C:\\windows
+build --action_env=TEMP=C:\\Windows\\TEMP
+build --action_env=TMP=C:\\Windows\\TEMP
+
+# build --action_env=

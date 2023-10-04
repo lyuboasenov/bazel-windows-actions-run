@@ -30,6 +30,15 @@ def ps_run_impl(ctx):
       outputs = [output_log],
       executable = "powershell.exe",
       arguments = [args],
+      use_default_shell_env = True,
+      env = {
+         'PATH': 'C:\\windows;C:\\windows\\system32;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;',
+         'PathEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL',
+         'SYSTEMDRIVE': 'C:',
+         'SYSTEMROOT': 'C:\\windows',
+         'TEMP': 'C:\\Windows\\TEMP',
+         'TMP': 'C:\\Windows\\TEMP',
+      },
    )
 
    return [DefaultInfo(files = depset([output_log]))]
